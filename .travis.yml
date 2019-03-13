@@ -10,9 +10,9 @@ script:
 
 after_success:
   - docker build -t asb161/multi-client ./client
-  - docker build -t asb161/mulit-nginx ./nginx
-  - docker build -t asb161/mulit-server ./server
-  - docker build -t asb161/mulit-worker ./worker
+  - docker build -t asb161/multi-nginx ./nginx
+  - docker build -t asb161/multi-server ./server
+  - docker build -t asb161/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub.
